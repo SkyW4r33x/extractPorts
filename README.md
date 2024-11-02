@@ -12,7 +12,7 @@
 
 1. Ubica el script en `/usr/bin`:
    ```bash
-   sudo mv extract_ports.py /usr/bin/extractPorts.py
+   sudo mv extractPorts.py /usr/bin/extractPorts.py
    ```
 
 2. Otorga permisos de ejecución:
@@ -43,8 +43,9 @@ extractPorts <archivo>
 
 **Ejemplo**:
 ```bash
-extractPorts scan_output.txt
+extractPorts allPorts
 ```
+![image](https://github.com/user-attachments/assets/d08214cb-966f-4579-bb14-5d6d961ab974)
 
 Esto mostrará la IP y puertos abiertos, además de generar y copiar el comando de escaneo detallado a tu portapapeles.
 
