@@ -42,8 +42,6 @@ extractPorts <archivo>
 ```bash
 extractPorts allPorts
 ```
-![image](https://github.com/user-attachments/assets/60e09f89-5265-4e28-846a-d527edd792bd)
-
 
 Esto mostrará la IP y puertos abiertos, además de generar y copiar el comando de escaneo detallado a tu portapapeles.
 
