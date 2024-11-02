@@ -1,4 +1,4 @@
-
+---
 
 # Extract Ports
 
@@ -10,15 +10,41 @@
 - **Colorama** (`pip install colorama`)
 - `xclip` en Linux o `pbcopy` en macOS para copiar al portapapeles.
 
+## Instalación
+
+1. Ubica el script en `/usr/bin`:
+   ```bash
+   sudo mv extractPorts.py /usr/bin/extractPorts.py
+   ```
+   
+2. Otorga permisos de ejecución:
+   ```bash
+   sudo chmod +x /usr/bin/extractPorts.py
+   ```
+
+3. Agrega un alias en `.zshrc` o `.bashrc` para facilitar su uso:
+   ```bash
+   alias extractPorts='/usr/bin/extractPorts.py'
+   ```
+
+4. Recarga el archivo de configuración:
+   ```bash
+   source ~/.zshrc   # o source ~/.bashrc
+   ```
+
 ## Uso
 
 ```bash
-python3 extractPorts.py <archivo>
+extractPorts <archivo>
 ```
 
 **Ejemplo**:
 ```bash
-python3 extractPorts.py allPorts
+extractPorts allPorts
 ```
+![image](https://github.com/user-attachments/assets/60e09f89-5265-4e28-846a-d527edd792bd)
+
 
 Esto mostrará la IP y puertos abiertos, además de generar y copiar el comando de escaneo detallado a tu portapapeles.
+
+---
