@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-
 import sys
 import re
 import subprocess
 import os
 from colorama import Fore, Style, init
 
-# Inicializar Colorama
 init(autoreset=True)
 
 def print_banner():
@@ -44,9 +42,8 @@ def extract_ports(input_file):
     print(Fore.BLUE + Style.BRIGHT + "\t[*]" + Style.RESET_ALL + " Dirección IP: " + Fore.YELLOW + Style.BRIGHT + ip_address)
     print(Fore.BLUE + Style.BRIGHT + "\t[*]"  + Style.RESET_ALL + " Puertos abiertos: " + Fore.YELLOW + Style.BRIGHT + ports + "\n")
 
-    # Copiar puertos al portapapeles
     try:
-        if sys.platform == "darwin":  # macOS
+        if sys.platform == "darwin":
             subprocess.run(["pbcopy"], input=ports.encode(), check=True)
         elif sys.platform == "linux":
             subprocess.run(["xclip", "-selection", "clipboard"], input=ports.encode(), check=True)
@@ -55,7 +52,6 @@ def extract_ports(input_file):
     except subprocess.CalledProcessError:
         print(Fore.YELLOW + Style.BRIGHT + "[!] Advertencia: No se pudo copiar el comando de nmap a la clipboard.")
 
-    # Generar comando Nmap para escaneo detallado
     nmap_command = f"nmap -sCV -p{ports} {ip_address} -oN targeted -oX targetedXML"
     print(Fore.MAGENTA + Style.BRIGHT + "[+] " + Style.RESET_ALL + "Comando nmap para escaneo detallado copiado a la clipboard:\n")
     print(Fore.CYAN + "\t" + "nmap " + Fore.GREEN + "-sCV " +
@@ -66,9 +62,8 @@ def extract_ports(input_file):
           Fore.GREEN + "-oX " + 
           Fore.WHITE + "targetedXML")
 
-    # Copiar el comando Nmap al portapapeles
     try:
-        if sys.platform == "darwin":  # macOS
+        if sys.platform == "darwin":
             subprocess.run(["pbcopy"], input=nmap_command.encode(), check=True)
         elif sys.platform == "linux":
             subprocess.run(["xclip", "-selection", "clipboard"], input=nmap_command.encode(), check=True)
