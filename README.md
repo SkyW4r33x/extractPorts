@@ -4,7 +4,7 @@
 
 ## Requisitos
 
-- **Python 3.x**
+- **Python**
 - **Colorama**: Instalación mediante `pip`
   ```bash
   pip install colorama
