@@ -1,6 +1,6 @@
-# Extract Ports
+# ExtractPorts
 
-**Extract Ports** es una herramienta en Python que permite extraer la dirección IP y puertos abiertos desde archivos de salida `nmap` en formato `-oG`. También genera un comando `nmap` para un escaneo detallado y lo copia automáticamente al portapapeles.
+**ExtractPorts** es una herramienta en Python que permite extraer la dirección IP y puertos abiertos desde archivos de salida `nmap` en formato `-oG`. También genera un comando `nmap` para un escaneo detallado y lo copia automáticamente al portapapeles.
 
 ## Requisitos
 
