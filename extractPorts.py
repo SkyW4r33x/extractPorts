@@ -19,9 +19,9 @@ def print_banner():
     """
     print(Fore.RED + Style.BRIGHT + banner)
 
-def extract_ports(input_file):
+def extractPorts(input_file):
     if not input_file:
-        print(Fore.YELLOW + Style.BRIGHT + "[!] Uso: python3 extract_ports.py <filename>")
+        print(Fore.YELLOW + Style.BRIGHT + "[!] Uso: python3 extractPorts.py <filename>")
         return 1
 
     if not os.path.isfile(input_file):
@@ -73,6 +73,6 @@ def extract_ports(input_file):
 if __name__ == "__main__":
     print_banner()
     if len(sys.argv) < 2:
-        print(Fore.YELLOW + Style.BRIGHT + "[!] Uso: python3 extract_ports.py <filename>")
+        print(Fore.YELLOW + Style.BRIGHT + "[!] Uso: python3 extractPorts.py <filename>")
     else:
-        extract_ports(sys.argv[1])
+        extractPorts(sys.argv[1])
